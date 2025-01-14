@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: #d3d3d3;
+    text-underline: transparent;
+}
+
+.background{
+    width: 100vw;
+    height: 80vh;
+    background-image: linear-gradient(90deg, #0B486B, #F56217);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    background:  transparent;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    transition: 0.5s ease;
+
+}
+
+header p:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+
+}
+
+#Left-Section{
+    padding-left: 2rem;
+}
+
+#Right-Section{
+    display: flex;
+    flex-direction: row;
+    padding-right: 2rem;
+    gap: 2rem;
+}
+
+#Right-Section p {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+
+#Left-Section p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.Landing{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    gap: 3rem;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#profile_pic{
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    background: antiquewhite;
+}
+
+#about{
+    width: 40vw;
+    height: 40vh;
+}
+
+.Projects{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+    margin: 2rem auto;
+}
+
+.Project-Box{
+    width: 40vw;
+    height: 14vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border: 5px;
+    border-radius: 10%;
+    transition-duration: 0.5s;
+
+
+}
+
+.Project-Box:hover{
+    transform: translateY(8px);
+    background: #d3d3d3;
+}
+
+
+.hidden-desc{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+
+.hidden-desc p{
+    padding: 1rem 2rem 0 2rem;
+}
+
+.yt{
+    margin-top: 2rem;
+    width:auto;
+    height: auto;
+    border-radius: 20%;
+}

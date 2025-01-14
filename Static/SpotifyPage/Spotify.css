@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.Background{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background: #232020;
+}
+
+.Right{
+    width: 50vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.Left{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 4rem;
+    gap: 2rem;
+}
+
+input {
+    width: 40vw;
+    height: 5vh;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: large;
+}
+
+input[type=text]{
+    padding-left: 1rem;
+}
+
+button{
+    height: 5vh;
+    width: 10vw;
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+
+
+
+iframe{
+    padding-right: 2rem;
+}
+
