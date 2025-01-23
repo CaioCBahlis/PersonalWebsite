@@ -15,8 +15,6 @@ import (
 	"time"
 )
 
-//TODO Cache Access token
-
 var MyPlaylistID = "03tfjQyEbooihXvHinrWqU"
 
 type MyTokens struct {
@@ -39,8 +37,15 @@ func AddSong(query string) {
 
 	My_Info := Login_Info{os.Getenv("CLIENT_ID"), os.Getenv("CLIENT_SECRET"), os.Getenv("REFRESH_TOKEN")}
 
-	GetClientFlowAccessToken(My_Info)               //Caching
-	GetAccessToken(My_Info.CLIENT_REFRESH, My_Info) //Caching
+	err = GetClientFlowAccessToken(My_Info)
+	if err != nil {
+		fmt.Printf("Error getting the Client Token: %v", err)
+	}
+	err = GetAccessToken(My_Info.CLIENT_REFRESH, My_Info)
+	if err != nil {
+		fmt.Printf("Error getting the Auth Token: %v", err)
+	}
+
 	MySongID, _ := SpotifySearch(AccessToken, query, "TO_IMPLEMENT")
 	AddToPlaylist(AccessToken.AuthToken, MySongID)
 
@@ -93,7 +98,9 @@ func SpotifySearch(AccessToken *MyTokens, SearchQuery, QueryType string) (string
 	//Only works for songs, doesnt work with special characters like &
 	//TODO Add artists, albums and more
 	//TODO Fix Special Characters
+	fmt.Println("Input Query:", SearchQuery)
 	Queried := QueryFormatter(SearchQuery)
+	fmt.Println("Query:", Queried)
 	url := fmt.Sprintf("https://api.spotify.com/v1/search?q=%s&type=track", Queried)
 
 	req, err := http.NewRequest("GET", url, nil)
@@ -104,13 +111,13 @@ func SpotifySearch(AccessToken *MyTokens, SearchQuery, QueryType string) (string
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
+
 	if err != nil {
 		return "", err
 	}
 	defer resp.Body.Close()
 
 	body, _ := ioutil.ReadAll(resp.Body)
-	//print(string(body))
 
 	type SongID struct {
 		ID string `json:"id"`
@@ -161,11 +168,8 @@ func AddToPlaylist(AuthToken string, TRACK_ID string) error {
 		return fmt.Errorf("error sending request: %v", err)
 	}
 
-	fmt.Println(resp.StatusCode)
 	defer resp.Body.Close()
-	fmt.Println(string(body))
 	return nil
-
 }
 
 func GetAccessToken(RefreshToken string, MyInfo Login_Info) error {

@@ -13,7 +13,7 @@ a, a:visited{
 .background{
     width: 100vw;
     height: 80vh;
-    background-image: linear-gradient(90deg, #0B486B, #F56217);
+    background-image: linear-gradient(90deg, #1A2980, #26D0CE);
 }
 
 header{
@@ -89,7 +89,6 @@ header p:hover{
     flex: 1 1;
     justify-content: center;
     flex-wrap: wrap;
-
     gap: 1rem;
     margin: 2rem auto;
 }
@@ -105,9 +104,10 @@ header p:hover{
     border: 5px;
     border-radius: 10%;
     transition-duration: 0.5s;
-
-
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .Project-Box:hover{
     transform: translateY(8px);
@@ -120,11 +120,7 @@ header p:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
-
 }
-
 
 .hidden-desc p{
     padding: 1rem 2rem 0 2rem;
@@ -134,5 +130,5 @@ header p:hover{
     margin-top: 2rem;
     width:auto;
     height: auto;
-    border-radius: 20%;
+    border-radius: 10%;
 }

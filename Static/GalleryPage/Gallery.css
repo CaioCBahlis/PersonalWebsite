@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-underline: transparent;
+}
+
+
+body{
+    width: 100vw;
+    height: 150vh;
+    background: #232020;
+    font-family: Fantasy;
+}
+
+header{
+    width: 100vw;
+    height:  10vh;
+    background: #232020;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header p:hover{
+    transform: scale(1.15);
+    color: white;
+    transition-duration: 0.5s;
+}
+
+#Left-Section{
+    padding-left: 2rem;
+
+}
+
+#Right-Section{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding-right: 2rem;
+
+}
+
+#Description{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Photos{
+    width: 100vw;
+    height: 140vh;
+    background: white;
+    display: grid;
+    justify-items: center;
+    padding-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Photo-Box{
+    width: 25vw;
+    height: 25vh;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.PhotoBackground{
+    height: 100%;
+    width: 100%;
+    background: #fca311;
+}
+
+.PhotoDesc{
+    visibility: hidden;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background: #14213d;
+}
+
+.Photo-Box.expanded {
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    width: 60vw;
+    height: 60vh;
+    background: #fca311;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 2;
+}
+
+#Desc-Box {
+    width: 60vw;
+    height: 47vh;
+    border-radius: 25%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h2 {
+    height: 10vh;
+    font-size: 3rem;
+    grid-column: 1 / -1;
+}
+
+#Desc-Box p{
+    width: 80%;
+}
+
+.Photo-Box:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    background: rgba(35, 32, 32, 0.84);
+    cursor: pointer;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
