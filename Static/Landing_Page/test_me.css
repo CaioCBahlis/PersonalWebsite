@@ -13,7 +13,10 @@ a, a:visited{
 .background{
     width: 100vw;
     height: 80vh;
-    background-image: linear-gradient(90deg, #1A2980, #26D0CE);
+ background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 header{
@@ -50,6 +53,7 @@ header p:hover{
 #Right-Section p {
     font-weight: 500;
     font-size: 1.25rem;
+    font-family: Georgia;
 }
 
 
@@ -67,19 +71,37 @@ header p:hover{
     height: 80vh;
     justify-content: center;
     align-items: center;
-
 }
 
 #profile_pic{
-    height: 135px;
-    width: 135px;
+    height: 13vw;
+    width: 13vw;
     border-radius: 50%;
     background: antiquewhite;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#about{
-    width: 40vw;
+#profile_pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.about{
+    width: 50vw;
     height: 40vh;
+    color: #ffffff;
+    font-size: 1.65vw;
+    text-wrap: pretty;
+    line-height: 1.3;
+    font-family: Georgia;
+    text-align: center;
+    word-break: auto-phrase;
 }
 
 .Projects{
@@ -102,7 +124,7 @@ header p:hover{
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     border: 5px;
-    border-radius: 10%;
+    border-radius: 5%;
     transition-duration: 0.5s;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -132,3 +154,4 @@ header p:hover{
     height: auto;
     border-radius: 10%;
 }
+

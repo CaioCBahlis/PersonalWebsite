@@ -23,7 +23,7 @@ header{
 
 #Left-Section{
     padding-left: 2rem;
-
+    font-size: 1.25rem;
 }
 
 #Right-Section{
@@ -31,6 +31,7 @@ header{
     flex-direction: row;
     gap: 3rem;
     padding-right: 2rem;
+    font-size: 1.25rem;
 
 }
 
@@ -56,7 +57,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 0 2rem 0;
+    padding: 0 0 8rem 0;
     color: white;
 }
 
@@ -66,12 +67,14 @@ h1{
     width: 100vw;
     height: 10vh;
     text-align: center;
+    padding-bottom: 2rem;
 
 }
 
 .Medium-Desc p{
     width: 70vw;
     height: 5vh;
+    font-size: 1.45vw;
     text-align: center;
 }
 
@@ -87,7 +90,6 @@ h1{
     overflow-x: scroll;
     padding: 0 0 2rem 2rem;
     border-radius: 5%;
-
 }
 
 .Medium-Box{
@@ -102,16 +104,29 @@ h1{
     box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.Medium-Box p{
+    color: black;
+    padding: 0 1rem 1rem 1rem;
+    font-size: 1.15vw;
+    width: 100%;
+    height: 20%;
+    white-space: nowrap;
+    text-wrap: auto;
+    text-overflow: ellipsis;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
 img{
     padding: 1rem 0 0 0;
     width: 100%;
-    height: 60%;
+    height: 55%;
     object-fit: fill;
 }
 
 .Title{
     width: 80%;
-    height: 40%;
+    min-height: 10%;
     background: #3c3636;
     box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     color: #ffffff;
@@ -120,11 +135,6 @@ img{
     justify-content: center;
 }
 
-.Medium-Box p{
-    color: black;
-    text-wrap: pretty;
-    padding: 0 1rem 1rem 1rem;
-}
 
 .Medium-Box:hover{
     transform: scale(1.1);

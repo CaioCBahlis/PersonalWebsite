@@ -36,6 +36,7 @@ header p:hover{
 
 #Left-Section{
     padding-left: 2rem;
+    font-size: 1.25rem;
 
 }
 
@@ -44,6 +45,7 @@ header p:hover{
     flex-direction: row;
     gap: 3rem;
     padding-right: 2rem;
+    font-size: 1.25rem;
 
 }
 
@@ -53,6 +55,11 @@ header p:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.3vw;
+}
+
+#Description p{
+    padding-top: 2rem;
 }
 
 #Photos{
@@ -70,13 +77,15 @@ header p:hover{
     height: 25vh;
     margin-bottom: 1rem;
     flex-direction: column;
+    border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
 }
+
 
 .PhotoBackground{
     height: 100%;
     width: 100%;
-    background: #fca311;
 }
 
 .PhotoDesc{
@@ -128,9 +137,12 @@ h2 {
     cursor: pointer;
 }
 
+
+
 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    overflow: hidden;
+    border-radius: 5%;
 }
+
