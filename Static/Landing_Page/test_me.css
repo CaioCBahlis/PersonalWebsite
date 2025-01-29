@@ -134,6 +134,7 @@ header p:hover{
 .Project-Box:hover{
     transform: translateY(8px);
     background: #d3d3d3;
+    cursor: pointer;
 }
 
 
@@ -146,6 +147,27 @@ header p:hover{
 
 .hidden-desc p{
     padding: 1rem 2rem 0 2rem;
+}
+
+.Github a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row ;
+    color: black;
+    gap: 1rem;
+}
+
+.Github a img{
+     width: 7%;
+    height: auto;
+    padding: 1rem 0 1rem 0;
+}
+
+.Github a img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.6s;
+    cursor: pointer;
 }
 
 .yt{
